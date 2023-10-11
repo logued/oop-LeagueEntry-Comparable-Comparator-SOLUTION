@@ -19,6 +19,7 @@ public class Main {
         league1.sortByGamesPlayedAscending();
         league1.display();
 
-
+        //league1.sortByGamesPlayedDescending();
+        league1.display();
     }
 }

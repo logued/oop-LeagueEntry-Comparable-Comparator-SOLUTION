@@ -26,7 +26,7 @@ public class League {
     }
 
     public void sortByGamesPlayedAscending() {
-        Collections.sort( teamsList, new GamesPlayedComparator() );
+        Collections.sort( teamsList, new GamesPlayedAscendingComparator() );
     }
 
 

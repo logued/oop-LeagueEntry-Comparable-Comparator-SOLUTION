@@ -3,7 +3,7 @@ package org.example;
 
 // set Natural Ordering by "implementing Comparable" interface,
 // and overriding the compareTo() method
-public class LeagueEntry {
+public class LeagueEntry implements Comparable<LeagueEntry>{
 
     private String name;
     private int played;
@@ -12,7 +12,10 @@ public class LeagueEntry {
     private int drew;
     private int totalPoints;
 
-
+    @Override
+    public int compareTo(LeagueEntry otherTeam) {
+        return this.name.compareTo(otherTeam.name);
+    }
     public LeagueEntry(String name, int played, int won, int lost, int drew, int totalPoints) {
         this.name = name;
         this.played = played;
@@ -81,5 +84,6 @@ public class LeagueEntry {
                 ", totalPoints=" + totalPoints +
                 '}' +"\n";
     }
+
 
 }
